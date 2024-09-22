@@ -1,0 +1,47 @@
+
+
+
+<h1>Systeme</h1>
+
+<table class="table">
+    <tbody>
+    <tr>
+        <th>Id</th>
+        <td>{{ Systeme.id }}</td>
+    </tr>
+    <tr>
+        <th>Etat</th>
+        <td>{{ Systeme.etat }}</td>
+    </tr>
+    <tr>
+        <th>NvStock</th>
+        <td>{{ Systeme.nvStock }}</td>
+    </tr>
+    <tr>
+        <th>NvEau</th>
+        <td>{{ Systeme.nvEau }}</td>
+    </tr>
+    <tr>
+        <th>SeuilStock</th>
+        <td>{{ Systeme.seuilStock }}</td>
+    </tr>
+    <tr>
+        <th>SeuilEau</th>
+        <td>{{ Systeme.seuilEau }}</td>
+    </tr>
+    <tr>
+        <th>Eclairage</th>
+        <td>{{ Systeme.eclairage ? 'Yes' : 'No' }}</td>
+    </tr>
+    <tr>
+        <th>Date</th>
+        <td>{{ Systeme.date ? Systeme.date|date('Y-m-d H:i:s') : '' }}</td>
+    </tr>
+
+
+
+    </tbody>
+</table>
+
+
+2022 © Pet Feeder

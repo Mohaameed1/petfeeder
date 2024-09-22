@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Systeme{% endblock %}
+
+{% block body %}
+    <h1>Systeme</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ systeme.id }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ systeme.etat }}</td>
+            </tr>
+            <tr>
+                <th>NvStock</th>
+                <td>{{ systeme.nvStock }}</td>
+            </tr>
+            <tr>
+                <th>NvEau</th>
+                <td>{{ systeme.nvEau }}</td>
+            </tr>
+            <tr>
+                <th>SeuilStock</th>
+                <td>{{ systeme.seuilStock }}</td>
+            </tr>
+            <tr>
+                <th>SeuilEau</th>
+                <td>{{ systeme.seuilEau }}</td>
+            </tr>
+            <tr>
+                <th>Eclairage</th>
+                <td>{{ systeme.eclairage ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ systeme.date ? systeme.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_systeme_index') }}">back to list</a>
+
+    <a href="{{ path('app_systeme_edit', {'id': systeme.id}) }}">edit</a>
+
+    {{ include('systeme/_delete_form.html.twig') }}
+{% endblock %}
